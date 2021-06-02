@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   def index
+    @blogs = Blog.all
   end
 
   def show
@@ -14,6 +15,7 @@ class BlogsController < ApplicationController
     blog.save
     redirect_to blogs_path
   end
+  
   
   def edit
   end
